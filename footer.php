@@ -1,7 +1,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row row-grid align-items-center">
-        <div class="col-lg-12 text-lg-center btn-wrapper justify-content-center">
+        <div class="col-lg-12 text-center btn-wrapper justify-content-center">
 		<?php if(meowdata('social_qq')){?> <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=<?php echo meowdata('social_qq');?>&amp;site=qq&amp;menu=yes" target="_blank" class="btn btn-neutral btn-icon-only btn-qq btn-round btn-lg wow fadeInUpBig" data-toggle="tooltip" data-original-title="博主宝宝QQ<?php echo meowdata('social_qq');?>"><i class="fa fa-qq"></i></a><?php } ?>
 		<?php if(meowdata('social_github')){?><a target="_blank" href="<?php echo meowdata('social_github');?>" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Github">            <i class="fa fa-github"></i>          </a><?php } ?>
 		<?php if(meowdata('social_wechat')){?><button type="button" class="btn btn-neutral btn-icon-only btn-wechat btn-round btn-lg wow fadeInUpBig" data-toggle="modal" data-target="#modal-notification"><i class="fa fa-wechat"></i></button>		
@@ -54,15 +54,15 @@
   <?php if(meowdata('lolijump')){?>
   <div id="lolijump"><img src="<?php echo meowdata('style_src') ;?>/assets/images/lolijump.gif" ></div>  
   <script language="javascript">
-lastScrollY=0;
-function heartBeat0(){
-diffY=document.body.scrollTop;
-percent=.1*(diffY-lastScrollY);
-if(percent>0)percent=Math.ceil(percent);
-else percent=Math.floor(percent);
-document.all.lolijump.style.pixelTop+=percent;
-lastScrollY=lastScrollY+percent;}
-window.setInterval("heartBeat0()",1);
+// lastScrollY=0;
+// function heartBeat0(){
+// diffY=document.body.scrollTop;
+// percent=.1*(diffY-lastScrollY);
+// if(percent>0)percent=Math.ceil(percent);
+// else percent=Math.floor(percent);
+// document.all.lolijump.style.pixelTop+=percent;
+// lastScrollY=lastScrollY+percent;}
+// window.setInterval("heartBeat0()",1);
 $('#lolijump').click(function(){
         $('html, body').animate({                
             scrollTop: 0
