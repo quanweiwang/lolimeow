@@ -179,8 +179,13 @@ function optionsframework_options() {
 		'name' => __('网站底部版权后自定义信息', 'meowdataui'),
 		'id' => 'footer_info',
 		'std' => '本站使用Wordpress创作'."\n",
-		'type' => 'textarea');	
-	$options[] = array(
+		'type' => 'textarea');
+    $options[] = array(
+        'name' => __('icp备案信息', 'meowdataui'),
+        'id' => 'footer_icp',
+        'std' => '闽ICP备00000000号-1'."\n",
+        'type' => 'text');
+    $options[] = array(
 		'name' => __('统计代码隐藏', 'meowdataui'),
 		'id' => 'trackcodehidden',
 		'type' => "checkbox",
