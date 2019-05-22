@@ -30,7 +30,7 @@ $images = count($strResult[1]);
 //没有设置特色图片则取文章第一张图片
 if($images > 0)
 {
-$html = sprintf ('src="'.$strResult[1][0].'"  alt="'.trim(strip_tags( $post->post_title )).'"');
+$html = sprintf('src="%s" alt="%s"',$strResult[1][0],trim(strip_tags( $post->post_title )));
 }
 else
 {
