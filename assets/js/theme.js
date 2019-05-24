@@ -149,9 +149,9 @@ $(document).ready(function () {
     function inlojv_js_getqqinfo(){
 
         // 获取cookie
-        if(getCookie('user_avatar') && getCookie('user_qq') ){
+        if(getCookie('user_qq') ){
 
-            $('div.comment-user-avatar img').attr('src',getCookie('user_avatar'));
+            // $('div.comment-user-avatar img').attr('src',getCookie('user_avatar'));
             $('#qq').val(getCookie('user_qq'));
         }
 
