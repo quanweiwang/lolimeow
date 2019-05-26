@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a16414a-3874-4f0f-9144-c37d31fb8e6e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ajax-comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ajax-comments.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +33,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+            <state relative-caret-position="133">
+              <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#form#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,12 +249,12 @@
       <workItem from="1558519983734" duration="1006000" />
       <workItem from="1558574226386" duration="1160000" />
       <workItem from="1558661201722" duration="11749000" />
-      <workItem from="1558872355098" duration="6156000" />
+      <workItem from="1558872355098" duration="6611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35242000" />
+    <option name="totallyTimeSpent" value="35697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -420,26 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/themes.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret column="27386" lean-forward="true" selection-end-column="228388" />
-          <folding>
-            <element signature="e#61735#61943#2" expanded="true" />
-            <element signature="e#62167#62324#2" expanded="true" />
-            <element signature="e#62828#62982#2" expanded="true" />
-            <element signature="e#63330#63504#1" expanded="true" />
-            <element signature="e#74239#74505#2" expanded="true" />
-            <element signature="e#75416#75680#2" expanded="true" />
-            <element signature="e#103623#103821#2" expanded="true" />
-            <element signature="e#103867#104065#2" expanded="true" />
-            <element signature="e#178753#178961#2" expanded="true" />
-            <element signature="e#179434#179588#2" expanded="true" />
-            <element signature="e#195142#195406#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../wp-cron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -565,10 +546,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/themes.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret column="112326" selection-start-column="112326" selection-end-column="112326" />
+          <folding>
+            <element signature="e#61735#61943#2" expanded="true" />
+            <element signature="e#62167#62324#2" expanded="true" />
+            <element signature="e#62828#62982#2" expanded="true" />
+            <element signature="e#63330#63504#1" expanded="true" />
+            <element signature="e#74239#74505#2" expanded="true" />
+            <element signature="e#75416#75680#2" expanded="true" />
+            <element signature="e#103623#103821#2" expanded="true" />
+            <element signature="e#103867#104065#2" expanded="true" />
+            <element signature="e#178753#178961#2" expanded="true" />
+            <element signature="e#179434#179588#2" expanded="true" />
+            <element signature="e#195142#195406#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+        <state relative-caret-position="133">
+          <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#form#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -68,7 +68,7 @@ $closeTimer = (strtotime(date('Y-m-d G:i:s')) - strtotime(get_the_time('Y-m-d G:
                     &raquo;</a></div></div>
         <?php } ?>
         <div class="row justify-content-center mb10">
-            <div class="col-md-4"><a id="cancel-comment-reply-link" href="javascript:;" class="btn btn-sm btn-info"
+            <div class="col-md-12"><a id="cancel-comment-reply-link" href="javascript:;" class="btn btn-sm btn-info"
                                      style="display:none;"><?php echo __('取消回复', 'mogu') ?></a></div>
         </div>
         <?php if (!$user_ID && '' != $comment_author) : ?>
