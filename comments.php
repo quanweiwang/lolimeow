@@ -65,7 +65,8 @@ $closeTimer = (strtotime(date('Y-m-d G:i:s')) - strtotime(get_the_time('Y-m-d G:
             <div class="col-md-12"><a href="<?php echo get_option('siteurl'); ?>/user"
                                       class="btn btn-sm btn-info">您已登录:<?php echo $user_identity; ?></a> <a
                         href="<?php echo wp_logout_url(get_permalink()); ?>" class="btn btn-sm br" title="退出登录">退出
-                    &raquo;</a></div></div>    <?php } ?>
+                    &raquo;</a></div></div>
+        <?php } ?>
         <div class="row justify-content-center mb10">
             <div class="col-md-4"><a id="cancel-comment-reply-link" href="javascript:;" class="btn btn-sm btn-info"
                                      style="display:none;"><?php echo __('取消回复', 'mogu') ?></a></div>

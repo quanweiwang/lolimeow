@@ -1695,6 +1695,10 @@ blockquote small {
     margin: 0;
 }
 
+.children .comment .comment-body {
+    margin-left: 90px;
+}
+
 .comments-form .form-control:focus {
     color: #666;
 }
