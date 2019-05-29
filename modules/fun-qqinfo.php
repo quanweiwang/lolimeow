@@ -25,3 +25,13 @@ if($type == "getqqnickname"){
 //        }
 //    }
 //}
+
+function get_qq_info($qq) {
+    header('Content-Type: text/html; charset=utf8');
+    $ret = '';
+    if(preg_match('/\"nickname\":\"([^\"]+)\"/',
+        file_get_contents('http://r.qzone.qq.com/cgi-bin/user/cgi_personal_card?uin='.$qq),
+        $qqInfo)) {
+        $ret = $qqInfo[1];
+    }
+}

@@ -160,10 +160,18 @@ $(document).ready(function () {
             var qq=$('#qq').val(); // 获取访客填在qq表单上的qq数字，其中#qq表示QQ input标签上的id，改成你自己的！
             
             if (qq.length > 0) {
+
+                var i = 0, got = -1, len = document.getElementsByTagName('script').length;
+                while (i <= len && got == -1) {
+                    var js_url = document.getElementsByTagName('script')[i].src,
+                        got = js_url.indexOf('theme.js');
+                    i++;
+                }
+                var ajax_php_url = js_url.replace('theme.js', '../../modules/fun-qqinfo.php');
                 // ajax方法获取昵称
                 $.ajax({
                     type: 'get',
-                    url:'https://www.wangquanwei.com/wp-content/themes/lolimeow/modules/fun-qqinfo.php?type=getqqnickname&qq='+qq,  // func_getqqinfo.php是后端处理文件，注意路径，127.0.0.1 改成你自己的域名
+                    url:ajax_php_url+'?type=getqqnickname&qq='+qq,  // func_getqqinfo.php是后端处理文件，注意路径，127.0.0.1 改成你自己的域名
                     dataType: 'jsonp',
                     jsonp: 'callback',
                     jsonpCallback: 'portraitCallBack',
