@@ -420,8 +420,23 @@ function optionsframework_options() {
 			'std' => '游客',
 			'class' => 'mini',
 			'desc' => __('管理员发表回复评论的标志', 'meowdata'),
-			'type' => 'text');		
-	$options[] = array(
+			'type' => 'text');
+    $options[] = array(
+        'name' => __('开启输入QQ号自动填充昵称、邮箱', 'meowdata'),
+        'id' => 'comnane_qqinfo',
+        'type' => "checkbox",
+        'std' => false,
+        'desc' => __('开启输入QQ号自动填充昵称、邮箱', 'meowdata'));
+    $options[] = array(
+        'name' => __('主题所在路径', 'meowdata'),
+        'id' => 'comnane_site_url',
+        'type' => "radio",
+        'std' => "theme_url",
+        'options' => array(
+            'theme_url' => __(get_template_directory_uri(), '')),
+        'desc' => __('防止使用CDN导致无法获取QQ昵称、邮箱', 'meowdata')
+        );
+    $options[] = array(
 		'name' => __('评论者网址开启go跳转模式', 'meowdata'),
 		'id' => 'comnanesgo',
 		'type' => "checkbox",

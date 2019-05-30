@@ -103,35 +103,69 @@ $closeTimer = (strtotime(date('Y-m-d G:i:s')) - strtotime(get_the_time('Y-m-d G:
         <?php endif; ?>
         <?php if (!$user_ID): ?>
             <div class="row" id="comment-author-info">
-            <div class="col-md-3">
-                <div class="form-group">
-                    <input type="text" name="new_field_qq" id="qq" class="form-control"
-                           value="<?php echo $comment_author; ?>" placeholder="<?php echo __('QQ(自动获取昵称)', 'meowdata') ?>"
-                           tabindex="1">
-                </div>
-            </div><!-- Col 3 end -->
+            <?php if (meowdata('comnane_qqinfo')): ?>
+                <input name="url" id="url" value="<?php echo meowdata('comnane_site_url'); ?>" type="text">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="text" name="new_field_qq" id="qq" class="form-control"
+                               placeholder="<?php echo __('QQ(自动获取昵称)', 'meowdata') ?>"
+                               tabindex="1">
+                    </div>
+                </div><!-- Col 3 end -->
+            <?php endif; ?>
             <div class="col-md-3">
                 <div class="form-group">
                     <input type="text" name="author" id="author" class="form-control"
                            value="<?php echo $comment_author; ?>" placeholder="<?php echo __('昵称 *', 'meowdata') ?>"
-                           tabindex="1">
+                           tabindex="2">
                 </div>
             </div><!-- Col 3 end -->
             <div class="col-md-3">
                 <div class="form-group">
                     <input type="email" name="email" id="email" class="form-control"
                            value="<?php echo $comment_author_email; ?>"
-                           placeholder="<?php echo __('邮箱 *', 'meowdata') ?>" tabindex="2"/>
+                           placeholder="<?php echo __('邮箱 *', 'meowdata') ?>" tabindex="3"/>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <input type="text" name="url" id="url" class="form-control"
                            value="<?php echo $comment_author_url; ?>" placeholder="<?php echo __('网址', 'meowdata') ?>"
-                           size="22" tabindex="3"/>
+                           size="22" tabindex="4"/>
                 </div>
             </div>
-            </div><?php endif; ?>
+            </div>
+            <script type="text/javascript" charset="utf-8">
+                $(document).ready(function () {
+                    $('#qq').on('blur',function(){
+                        var qq = $('#qq').val(); // 获取访客填在qq表单上的qq数字，其中#qq表示QQ input标签上的id，改成你自己的！
+                        var url = $('#url').val();
+                        if (qq.length > 0) {
+                            // ajax方法获取昵称
+                            $.ajax({
+                                type: 'get',
+                                url:url+'/modules/fun-qqinfo.php?type=getqqnickname&qq='+qq,  // func_getqqinfo.php是后端处理文件，注意路径，127.0.0.1 改成你自己的域名
+                                dataType: 'jsonp',
+                                jsonp: 'callback',
+                                jsonpCallback: 'portraitCallBack',
+                                success: function(data) {
+                                    // console.log(data);
+                                    $('#author').val(data[qq][6]);	// 将返回的qq昵称填入到昵称input表单上，其中#author表示昵称input标签上的id，改成你自己的！
+                                    $('#email').val($.trim(qq)+'@qq.com'); // 将获取到的qq，改成qq邮箱填入邮箱表单，其中#email表示邮箱input标签上的id，改成你自己的！
+                                    // alert('已获取昵称！'); // 弹出警告
+                                    // setCookie('user_qq',qq);	// 设置cookie
+                                },
+                                error: function() {
+                                    $('#qq,#author,#email').val(''); // 如果获取失败则清空表单，注意input标签上的id，改成你自己的！
+                                    alert('糟糕，昵称获取失败！请重新填写。'); // 弹出警告
+                                }
+                            });
+                        }
+
+                    });
+                })
+            </script>
+        <?php endif; ?>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">

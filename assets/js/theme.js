@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     new WOW().init();
-    inlojv_js_getqqinfo();
+    // inlojv_js_getqqinfo();
 
     $('body').on('click', '.comment-reply-link', function () {
         addComment.moveForm("comment-" + $(this).attr('data-commentid'), $(this).attr('data-commentid'), "respond", $(this).attr('data-postid'));
