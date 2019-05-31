@@ -8,7 +8,7 @@ while (i <= len && got == -1) {
     i++;
 }
 var edit_mode = '1', // 再编辑模式( '1'=打开; '0'=关闭 )
-    ajax_php_url = js_url.replace('custom.js', '../../modules/ajax-comments.php'),
+    ajax_php_url = js_url.replace('custom.js', '../../modules/ajax-comments.php').replace(/^https?:\/\/.+\/wp-content/, location.origin + "/wp-content"),
     wp_url = js_url.substr(0, js_url.indexOf('wp-content')),
 
     wp_url = js_url.substr(0, js_url.indexOf('wp-content')),
