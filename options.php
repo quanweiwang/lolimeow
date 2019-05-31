@@ -428,12 +428,12 @@ function optionsframework_options() {
         'std' => false,
         'desc' => __('开启输入QQ号自动填充昵称、邮箱', 'meowdata'));
     $options[] = array(
-        'name' => __('主题所在路径', 'meowdata'),
+        'name' => __('主题原始路径(仅勾选↑时有效)', 'meowdata'),
         'id' => 'comnane_site_url',
         'type' => "radio",
-        'std' => "theme_url",
+        'std' => get_template_directory_uri(),
         'options' => array(
-            'theme_url' => __(get_template_directory_uri(), '')),
+            get_template_directory_uri() => __(get_template_directory_uri(), '')),
         'desc' => __('防止使用CDN导致无法获取QQ昵称、邮箱', 'meowdata')
         );
     $options[] = array(
