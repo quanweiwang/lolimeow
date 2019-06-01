@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo  md_title(); ?></title>
   <?php if(meowdata('favicon_src')){?><?php echo  md_favicon();?><?php } ?> 
-  <link type="text/css" href="<?php echo meowdata('style_src');?>/assets/css/themes.min.css?ver=<?php md_version() ;?>" rel="stylesheet">
+  <link type="text/css" href="<?php echo md_stylesrc();?>/assets/css/themes.min.css?ver=<?php md_version() ;?>" rel="stylesheet">
     <link href="<?php echo meowdata('style_src') ;?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link type="text/css" href="<?php echo meowdata('style_src') ;?>/assets/css/animate.min.css" rel="stylesheet">
   <link type="text/css" href="<?php echo meowdata('style_src') ;?>/assets/css/style.css?ver=<?php md_version() ;?>" rel="stylesheet">   

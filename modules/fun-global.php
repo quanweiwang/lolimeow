@@ -37,8 +37,15 @@ function md_favicon() {
     $src = meowdata('favicon_src');
     if( !empty($src) ){
         $src = '<link rel="shortcut icon" href="'.$src.'" />';
-    }    
-    echo ''.$src.'';
+    }
+    echo $src;
+}
+function md_stylesrc() {
+    $src = meowdata('style_src');
+    if(empty($src) ){
+        $src = get_template_directory_uri();
+    }
+    echo $src;
 }
 
 //banner参数
