@@ -139,4 +139,40 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
+
+    $('#qq').on('blur',function() {
+
+        var i = 0, got = -1, len = document.getElementsByTagName('script').length;
+        while (i <= len && got == -1) {
+            var js_url = document.getElementsByTagName('script')[i].src,
+                got = js_url.indexOf('theme.js');
+            i++;
+        }
+
+        var ajax_php_url = js_url.replace('theme.js', '../../modules/fun-qqinfo.php');
+        var ajax_php_url_arr = ajax_php_url.split("/");
+        ajax_php_url = ajax_php_url.replace(ajax_php_url_arr[2],location.hostname);
+        var qq_num = $('#qq').val(); // 获取访客填在qq表单上的qq数字，其中#qq表示QQ input标签上的id，改成你自己的！
+
+        if (qq_num.length > 0) {
+            // ajax方法获取昵称
+            $.ajax({
+                type: 'get',
+                url:ajax_php_url+'?type=getqqnickname&qq='+qq_num,
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                jsonpCallback: 'portraitCallBack',
+                success: function(data) {
+                    // console.log(data);
+                    $('#author').val(data[qq_num][6]);	// 将返回的qq昵称填入到昵称input表单上，其中#author表示昵称input标签上的id，改成你自己的！
+                    $('#email').val($.trim(qq_num)+'@qq.com'); // 将获取到的qq，改成qq邮箱填入邮箱表单，其中#email表示邮箱input标签上的id，改成你自己的！
+                },
+                error: function() {
+                    $('#qq,#author,#email').val(''); // 如果获取失败则清空表单，注意input标签上的id，改成你自己的！
+                    alert('糟糕，昵称获取失败！请重新填写。'); // 弹出警告
+                }
+            });
+        }
+
+    });
 });
