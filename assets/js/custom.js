@@ -8,9 +8,8 @@ while (i <= len && got == -1) {
     i++;
 }
 var edit_mode = '1', // 再编辑模式( '1'=打开; '0'=关闭 )
-    ajax_php_url = js_url.replace('custom.js', '../../modules/ajax-comments.php').replace(/^https?:\/\/.+\/wp-content/, location.origin + "/wp-content"),
+    ajax_php_url = js_url.replace('custom.js', '../../modules/ajax-comments.php'),
     wp_url = js_url.substr(0, js_url.indexOf('wp-content')),
-
     wp_url = js_url.substr(0, js_url.indexOf('wp-content')),
     pic_sb = wp_url + 'wp-admin/images/wpspin_dark.gif', // 提交 icon
     pic_no = wp_url + 'wp-admin/images/no.png',      // 错误 icon
@@ -22,6 +21,8 @@ var edit_mode = '1', // 再编辑模式( '1'=打开; '0'=关闭 )
     edt2 = ')\'>&nbsp;&nbsp;重新编辑</a></div> ',
     cancel_edit = '取消编辑',
     edit, num = 1, comm_array = [];
+var ajax_php_url_arr = ajax_php_url.split("/");
+ajax_php_url = ajax_php_url.replace(ajax_php_url_arr[2],location.hostname);
 comm_array.push('');
 
 jQuery(document).ready(function ($) {
