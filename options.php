@@ -211,7 +211,7 @@ function optionsframework_options() {
 		'name' => __('Banner加入背景图', 'meowdataui'),
 		'id' => 'banneron',
 		'type' => "checkbox",
-		'std' => true,
+		'std' => false,
 		'desc' => __('开启  （导航下方背景图）', 'meowdataui'),);
 
     $options[] = array(
