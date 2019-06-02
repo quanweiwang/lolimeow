@@ -9,13 +9,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo  md_title(); ?></title>
-  <?php if(meowdata('favicon_src')){?><?php echo  md_favicon();?><?php } ?> 
+  <?php if(meowdata('favicon_src')){?><?php echo  md_favicon();?><?php } ?>
   <link type="text/css" href="<?php echo md_stylesrc();?>/assets/css/themes.min.css?ver=<?php md_version() ;?>" rel="stylesheet">
-    <link href="<?php echo meowdata('style_src') ;?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link type="text/css" href="<?php echo meowdata('style_src') ;?>/assets/css/animate.min.css" rel="stylesheet">
-  <link type="text/css" href="<?php echo meowdata('style_src') ;?>/assets/css/style.css?ver=<?php md_version() ;?>" rel="stylesheet">   
-  <?php if( meowdata('diystyles') ){ ?> <link rel="stylesheet" href="<?php echo meowdata('style_src') ;?>/assets/css/diystyle.css"><?php } ?> 
-  <script src="<?php echo meowdata('style_src') ;?>/assets/vendor/jquery/jquery.min.js"></script>
+    <link href="<?php echo md_stylesrc() ;?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link type="text/css" href="<?php echo md_stylesrc() ;?>/assets/css/animate.min.css" rel="stylesheet">
+  <link type="text/css" href="<?php echo md_stylesrc() ;?>/assets/css/style.css?ver=<?php md_version() ;?>" rel="stylesheet">
+  <?php if( meowdata('diystyles') ){ ?> <link rel="stylesheet" href="<?php echo md_stylesrc() ;?>/assets/css/diystyle.css"><?php } ?>
+  <script src="<?php echo md_stylesrc() ;?>/assets/vendor/jquery/jquery.min.js"></script>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -47,25 +47,25 @@
           </div>
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
 		   <?php md_nav_menu() ;?>
-<li class="nav-item"><a href="#search" class="nav-link"><i class="fa fa-search"></i>Search</a></li>		   
-<?php if( meowdata('sign_f') & is_user_logged_in() ){ global $current_user; wp_get_current_user(); ?> 
+<li class="nav-item"><a href="#search" class="nav-link"><i class="fa fa-search"></i>Search</a></li>
+<?php if( meowdata('sign_f') & is_user_logged_in() ){ global $current_user; wp_get_current_user(); ?>
 <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle  nav-link" aria-haspopup="true"><i class="fa fa-user-circle-o"></i>Hello,<?php echo $current_user->nickname; ?></a>
 <ul class="dropdown-menu">
 <li class="nav-item"><a href="<?php echo site_url('/') ?><?php echo meowdata('users_page') ?>" class="dropdown-item"><i class="fa fa-address-card-o"></i>会员中心</a></li>
-<li class="nav-item"><a href="<?php echo wp_logout_url( home_url() ); ?>" class="dropdown-item"><i class="fa fa-sign-out"></i>注销登录</a></li></ul></li><?php } ?>		           
-		  </ul> 
+<li class="nav-item"><a href="<?php echo wp_logout_url( home_url() ); ?>" class="dropdown-item"><i class="fa fa-sign-out"></i>注销登录</a></li></ul></li><?php } ?>
+		  </ul>
 		<?php if( meowdata('sign_f') & !is_user_logged_in() ){ ?> <div class="my-2 meowlogin"> <div class="admin-login hidden-sm">
- <div class="ruike_user-wrapper"> 
+ <div class="ruike_user-wrapper">
  <span class="ruike_user-loader">
- <a href="<?php echo site_url('') ?>/login?r=<?php echo site_url('/') ?>/<?php echo meowdata('users_page') ?>" class="signin-loader z-bor">登录</a> 
+ <a href="<?php echo site_url('') ?>/login?r=<?php echo site_url('/') ?>/<?php echo meowdata('users_page') ?>" class="signin-loader z-bor">登录</a>
  <b class="middle-text"><span class="middle-inner">or</span></b> 
  </span> <span class="ruike_user-loader">
- <a href="<?php echo site_url('/') ?><?php echo meowdata('users_reg') ?>" class="signup-loader l-bor">注册</a></span> 
- </div> <i class="up-new"></i> 
- </div> 
+ <a href="<?php echo site_url('/') ?><?php echo meowdata('users_reg') ?>" class="signup-loader l-bor">注册</a></span>
+ </div> <i class="up-new"></i>
+ </div>
  </div><?php } ?>
         </div>
-      </div>	                                               
+      </div>
     </nav>
   </header>
 
