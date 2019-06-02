@@ -15,9 +15,9 @@ get_header();
         <span></span>
       </div>
       <div class="separator separator-bottom separator-skew" >
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
+<!--        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none">-->
+<!--          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>-->
+<!--        </svg>-->
       </div>
     </section> 
 <main class="meowblog">	
