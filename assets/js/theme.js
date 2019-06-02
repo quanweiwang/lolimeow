@@ -139,7 +139,7 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-
+    //Enter QQ to get nickname, mailbox
     $('#qq').on('blur',function() {
 
         var i = 0, got = -1, len = document.getElementsByTagName('script').length;
