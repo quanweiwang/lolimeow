@@ -11,7 +11,7 @@ set_post_thumbnail_size(380, 250, true );
 function _get_post_thumbnail( $single=true, $must=true ) {  
     global $post;
     $html = '';
-	$ospic = meowdata('style_src');
+	$ospic = empty(meowdata('style_src')) ? get_template_directory_uri() : meowdata('style_src');
 //如果有特色图片则取特色图片
 if ( has_post_thumbnail() ){
 	$domsxe = get_the_post_thumbnail();
@@ -35,7 +35,7 @@ $html = sprintf('src="%s" alt="%s"',$strResult[1][0],trim(strip_tags( $post->pos
 else
 {
 //既没有设置特色图片、文章内又没图片则取默认图片
-$thumbnail_no = meowdata('thumbnail_rand_n');
+$thumbnail_no = empty(meowdata('thumbnail_rand_n')) ? 1 : meowdata('thumbnail_rand_n') ;
 $temp_no = rand(1,$thumbnail_no);
 $html = sprintf ('src="'.$ospic.'/assets/images/rand/rand ('.$temp_no.').jpg"  alt="'.trim(strip_tags( $post->post_title )).'"');
 }
