@@ -183,7 +183,7 @@ function optionsframework_options() {
     $options[] = array(
         'name' => __('icp备案信息', 'meowdataui'),
         'id' => 'footer_icp',
-        'std' => '闽ICP备00000000号-1'."\n",
+        'std' => '',
         'type' => 'text');
     $options[] = array(
 		'name' => __('统计代码隐藏', 'meowdataui'),
@@ -505,7 +505,7 @@ function optionsframework_options() {
 		'name' => __('QQ'),
 		'desc' => __('直接输入QQ号，留空不展现', 'meowdata'),
 		'id' => 'social_qq',
-		'std' => '504888738',
+		'std' => '',
 		'type' => 'text');	
 	$options[] = array(
 		'name' => __('微信二维码'),
@@ -522,7 +522,7 @@ function optionsframework_options() {
 		'name' => __('Github'),
 		'desc' => __('直接输入链接，留空不展现', 'meowdata'),
 		'id' => 'social_github',
-		'std' => 'https://github.com/baomihuahua/',
+		'std' => '',
 		'type' => 'text');		
     /* 
 	 * 友链设置

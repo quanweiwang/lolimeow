@@ -725,7 +725,7 @@ a:hover {
     font-size: 14px;
     color: #8898aa;
     line-height: 26px;
-    /*margin-bottom: 30px;*/
+    margin-bottom: 10px;
 }
 
 .post-grid {
@@ -904,7 +904,7 @@ a:hover {
     position: absolute;
     width: 100%;
     top: -37px;
-    left: 0;
+    left: -25px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     padding-left: 50px;
@@ -1956,7 +1956,7 @@ blockquote small {
     }
 
     .person-box .person-icon .person-img {
-        top: 30px;
+        top: -30px;
     }
 
     .person-box .person-name {
@@ -4256,3 +4256,4 @@ li.fancybox-thumbs-loading {
     .fancybox-thumbs > ul > li {
         max-width: calc(100% - 10px)
     }
+}
