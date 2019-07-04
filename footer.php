@@ -60,7 +60,7 @@
                     <?php echo meowdata('footer_info') ?> <div <?php if(meowdata('trackcodehidden'))echo 'style="display:none;"'?>><?php echo meowdata('trackcode') ?>
                     </div>
                     <div>
-                        <a href="http://www.beian.miit.gov.cn/" target="_blank"><?php echo meowdata('footer_icp') ?></a>
+                        <a href="http://beian.miit.gov.cn/" target="_blank"><?php echo meowdata('footer_icp') ?></a>
                     </div>
                 </div>
             </div>
