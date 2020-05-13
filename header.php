@@ -9,13 +9,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo  md_title(); ?></title>
-  <?php if(meowdata('favicon_src')){?><?php echo  md_favicon();?><?php } ?>
+  <?php if(meowdata('favicon_src')){?><?php echo md_favicon();?><?php } ?>
   <link type="text/css" href="<?php echo md_stylesrc();?>/assets/css/themes.min.css?ver=<?php md_version() ;?>" rel="stylesheet">
-    <link href="<?php echo md_stylesrc() ;?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<?php echo md_stylesrc() ;?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link type="text/css" href="<?php echo md_stylesrc() ;?>/assets/css/animate.min.css" rel="stylesheet">
   <link type="text/css" href="<?php echo md_stylesrc() ;?>/assets/css/style.css?ver=<?php md_version() ;?>" rel="stylesheet">
   <?php if( meowdata('diystyles') ){ ?> <link rel="stylesheet" href="<?php echo md_stylesrc() ;?>/assets/css/diystyle.css"><?php } ?>
   <script src="<?php echo md_stylesrc() ;?>/assets/vendor/jquery/jquery.min.js"></script>
+  <?php if( meowdata('site_gray') ){ ?>
+  	<style type="text/css">
+	  	html{ 
+	  		filter: grayscale(100%); 
+	  		-webkit-filter: grayscale(100%); 
+	  		-moz-filter: grayscale(100%); 
+	  		-ms-filter: grayscale(100%); 
+	  		-o-filter: grayscale(100%); 
+	  		filter: url("data:image/svg+xml;utf8,#grayscale"); 
+	  		filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+	  		-webkit-filter: grayscale(1);
+	  	} 
+	  </style>
+  <?php } ?>
   <?php wp_head(); ?>
 </head>
 <body>

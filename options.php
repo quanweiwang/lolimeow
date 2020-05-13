@@ -104,6 +104,13 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
 	
+    $options[] = array(
+		'name' => __('全站置灰', 'meowdataui'),
+		'id' => 'site_gray',
+		'type' => "checkbox",
+		'std' => false,
+		'desc' => __('开启  （将网站变为黑白色）', 'meowdataui'),);
+
 	$options[] = array(
 		'name' => __( 'LOGO设置', 'meowdataui' ),
 		'id' => 'logosrc',
